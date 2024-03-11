@@ -11,12 +11,12 @@ const Filters = ({ categories }: { categories: Category[] }) => {
   const { categoryFilters, sort, setCategoryFilters, setSort } = useFilter()
 
   const handleCategories = (categoryId: string) => {
-    if(categoryFilters.includes(categoryId)) {
-      const updateCategories = categoryFilters.filter(id => id !== categoryId)
+    if (categoryFilters.includes(categoryId)) {
+      const updatedCategories = categoryFilters.filter(id => id !== categoryId)
 
-      setCategoryFilters(updateCategories)
+      setCategoryFilters(updatedCategories)
     } else {
-      setCategoryFilters(...categoryFilters, categoryId)
+      setCategoryFilters([...categoryFilters, categoryId])
     }
   }
   const handleSort = (value: string) => setSort(value)
@@ -44,15 +44,17 @@ const Filters = ({ categories }: { categories: Category[] }) => {
         <RadioButton
           label="Latest"
           value="-createdAt"
-          isSelected={sort === "-createdAt"}
+          isSelected={sort === '-createdAt'}
           onRadioChange={handleSort}
-          groupName="sort" />
+          groupName="sort"
+        />
         <RadioButton
           label="Oldest"
           value="createdAt"
-          isSelected={sort === "createdAt"}
+          isSelected={sort === 'createdAt'}
           onRadioChange={handleSort}
-          groupName="sort" />
+          groupName="sort"
+        />
       </div>
     </div>
   )
