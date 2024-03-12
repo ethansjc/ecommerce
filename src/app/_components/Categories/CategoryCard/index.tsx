@@ -1,5 +1,4 @@
 'use client'
-
 import React from 'react'
 import Link from 'next/link'
 
@@ -18,7 +17,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
 
   return (
     <Link
-      href="products"
+      href="/products"
       className={classes.card}
       style={{ backgroundImage: `url(${media.url})` }}
       onClick={() => setCategoryFilters([category.id])}
