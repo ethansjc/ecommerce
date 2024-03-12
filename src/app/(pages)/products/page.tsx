@@ -12,11 +12,10 @@ import Filters from './Filters'
 import classes from './index.module.scss'
 
 const Products = async () => {
-
   const { isEnabled: isDraftMode } = draftMode()
 
-  let page: Page | null = null;
-  let categories: Category[] | null = null;
+  let page: Page | null = null
+  let categories: Category[] | null = null
 
   try {
     page = await fetchDoc<Page>({
@@ -32,7 +31,7 @@ const Products = async () => {
   return (
     <div className={classes.container}>
       <Gutter className={classes.products}>
-        <Filters categories={categories}/>
+        <Filters categories={categories} />
         <Blocks blocks={page.layout} disableTopPadding={true} />
       </Gutter>
       <HR />
