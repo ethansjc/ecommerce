@@ -70,16 +70,13 @@ export const RecoverPasswordForm: React.FC = () => {
             />
           </form>
         </React.Fragment>
-  )
-}
-{
-  success && (
-    <React.Fragment>
-      <h1>Request submitted</h1>
-      <p>Check your email for a link that will allow you to securely reset your password.</p>
-    </React.Fragment>
-  )
-}
-    </Fragment >
+      )}
+      {success && (
+        <React.Fragment>
+          <h1>Request submitted</h1>
+          <p>Check your email for a link that will allow you to securely reset your password.</p>
+        </React.Fragment>
+      )}
+    </Fragment>
   )
 }
