@@ -12,6 +12,9 @@ import { mergeOpenGraph } from '../../_utilities/mergeOpenGraph'
 import AccountForm from './AccountForm'
 
 import classes from './index.module.scss'
+import UserInfo from './UserInfo'
+import Purchases from './purchases'
+import Orders from './orders'
 
 export default async function Account() {
   const { user } = await getMeUser({
@@ -24,6 +27,9 @@ export default async function Account() {
     <Fragment>
       <Gutter>
         <RenderParams className={classes.params} />
+        <Orders />
+        <Purchases />
+        <UserInfo />
       </Gutter>
       <LowImpactHero
         type="lowImpact"
