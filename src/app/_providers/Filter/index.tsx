@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, ReactNode, SetStateAction, useContext, useState } from "react";
+import { createContext, ReactNode, SetStateAction, useContext, useState } from 'react'
 
 interface IContextType {
   categoryFilter: string[]
@@ -32,7 +32,6 @@ export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       {children}
-
     </FilterContext.Provider>
   )
 }
