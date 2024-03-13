@@ -13,6 +13,9 @@ const nextConfig = {
       .filter(Boolean)
       .map(url => url.replace(/https?:\/\//, '')),
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
   redirects,
   async headers() {
     const headers = []
